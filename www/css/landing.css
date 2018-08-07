@@ -9,7 +9,7 @@
 .aboveVideo {
     position: absolute;
     z-index: 10000;
-    top: 12%;
+    top: 25%;
     width: 100%;
     display: flex;
     flex-flow: column wrap;
@@ -23,25 +23,52 @@
 
 @media (min-width: 1200px) and (max-width: 1399px) {
     .aboveVideo {
-        top: 35%;
+        top: 37%;
     }
 }
 
 @media (min-width: 1000px) and (max-width: 1199px) {
     .aboveVideo {
-        top: 28%;
+        top: 32%;
     }
 }
 
-@media (min-width: 700px) and (max-width: 999px) {
+@media (max-width: 999px) {
     .aboveVideo {
-        top: 28%;
+        top: 30%;
+    }
+}
+
+@media (max-width: 765px) {
+    .secondSlide .imageHolder2 img {
+        padding: 0 !important;
+    }
+
+    .BUY-NOW-BOX-COL {
+        text-align: center !important;
+    }
+
+    .secondSlide {
+        margin: 0 0 5% 0;
+    }
+}
+
+@media (max-width: 990px) {
+    .imageHolder3 {
+        padding-left: 5% !important;
+    }
+}
+
+@media (max-width: 575px) {
+    .forthSlide .doboz {
+        width: 50vw;
+        height: 50vw;
+        margin: 5%;
     }
 }
 
 .PLAY-THE-VIDEO {
     width: 100%;
-    height: 25px;
     font-family: Gotham;
     font-size: 25px;
     font-weight: 900;
@@ -88,8 +115,6 @@
     top: 20px;
     left: 50px;
     z-index: 10000;
-    width: 123px;
-    height: 36px;
 }
 
 .LOGO {
@@ -115,7 +140,6 @@
 
 .ALL-IN-ONE-FOR-EVERYBODY {
     width: 100%;
-    height: 80px;
     font-family: Gotham;
     font-size: 50px;
     font-weight: 500;
@@ -128,9 +152,44 @@
     align-self: center;
 }
 
+@media (max-width: 500px) {
+    .ALL-IN-ONE-FOR-EVERYBODY {
+        font-size: 25px;
+    }
+
+    .PLAY-THE-VIDEO {
+        font-size: 17px;
+    }
+
+    .Rectangle-5 {
+        width: auto;
+        height: auto;
+        padding: 1% 3.5%;
+    }
+
+    .Rectangle-7 {
+        display: none;
+    }
+}
+
+@media (min-width: 501px) and (max-width: 740px) {
+    .ALL-IN-ONE-FOR-EVERYBODY {
+        font-size: 35px;
+    }
+
+    .PLAY-THE-VIDEO {
+        font-size: 22px;
+    }
+
+    .Rectangle-5 {
+        width: auto;
+        height: auto;
+        padding: 0.5% 3%;
+    }
+}
+
 .image {
     width: 100%;
-    /*max-height: 1029px;*/
 }
 
 a {
@@ -172,7 +231,7 @@ a:hover {
     height: 4px;
     margin-bottom: 5px;
     position: relative;
-    background: #000;
+    background: #019ee0;
     border-radius: 3px;
     z-index: 10000;
     transform-origin: 4px 0px;
@@ -261,8 +320,6 @@ a:hover {
 }
 
 .titleText3 {
-    width: 628px;
-    height: 120px;
     font-family: Campton;
     font-size: 50px;
     font-weight: 900;
@@ -275,7 +332,6 @@ a:hover {
 }
 
 .descriptionText3 {
-    width: 628px;
     font-family: Campton-Light;
     font-size: 25px;
     font-weight: 300;
@@ -288,10 +344,15 @@ a:hover {
 }
 
 .doboz {
-    width: 263px;
-    height: 263px;
     background-color: #019ee0;
-    margin: 0px 10px 122px 10px;
+    width: 20vw;
+    height: 20vw;
+    display: flex;
+}
+
+.doboz .container {
+    align-self: flex-end;
+    padding: 5%;
 }
 
 .titleText4 {
@@ -323,7 +384,6 @@ a:hover {
 }
 
 .dobozTitleText {
-    height: 22px;
     font-family: Campton;
     font-size: 18px;
     font-weight: 600;
@@ -332,11 +392,11 @@ a:hover {
     line-height: 1.22;
     letter-spacing: normal;
     text-align: center;
-    color: #000000;
+    color: #fff;
+    text-transform: uppercase;
 }
 
 .dobozDescText {
-    height: 62px;
     font-family: HelveticaNeue;
     font-size: 12px;
     font-weight: normal;
@@ -345,8 +405,7 @@ a:hover {
     line-height: 1.75;
     letter-spacing: normal;
     text-align: center;
-    color: #000000;
-    margin: 15px 22px 0px 21px;
+    color: #fff;
 }
 
 .titleText5 {
@@ -364,7 +423,6 @@ a:hover {
 }
 
 .titleText {
-    height: 33px;
     font-family: Campton;
     font-size: 28px;
     font-weight: bold;
@@ -377,7 +435,6 @@ a:hover {
 }
 
 .descriptionText {
-    height: 62px;
     font-family: Campton-Light;
     font-size: 20px;
     font-weight: normal;
@@ -387,11 +444,10 @@ a:hover {
     letter-spacing: normal;
     text-align: left;
     color: #000000;
-    margin: 40px 243px 23px 0px;
+    margin: 2em 8em 2em 0em;
 }
 
 .footerText {
-    height: 31px;
     font-family: Campton-Light;
     font-size: 20px;
     font-weight: 500;
@@ -432,4 +488,12 @@ a:hover {
 
 .menuSocialStartMargin {
     margin-top: 255px;
+}
+
+.forthSlide {
+     margin: 7.5% -15px;
+ }
+
+.forthSlide .col-md-12 {
+    margin: 2.5% 0%;
 }
