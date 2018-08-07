@@ -1,0 +1,435 @@
+.Rectangle-5 {
+    width: 303px;
+    height: 59px;
+    border-radius: 10px;
+    background-color: #019ee0;
+    align-self: center;
+}
+
+.aboveVideo {
+    position: absolute;
+    z-index: 10000;
+    top: 12%;
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+@media (min-width: 1400px) {
+    .aboveVideo {
+        top: 40%;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .aboveVideo {
+        top: 35%;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+    .aboveVideo {
+        top: 28%;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 999px) {
+    .aboveVideo {
+        top: 28%;
+    }
+}
+
+.PLAY-THE-VIDEO {
+    width: 100%;
+    height: 25px;
+    font-family: Gotham;
+    font-size: 25px;
+    font-weight: 900;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.4;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+    margin: 10px 0px;
+}
+
+.Rectangle-7 {
+    position: absolute;
+    top: 20px;
+    right: 120px;
+}
+
+.BUY-NOW-BOX {
+    z-index: 10000;
+    width: 123px;
+    height: 36px;
+    border-radius: 5px;
+    background-color: #c62626;
+}
+
+.BUY-NOW {
+    width: 100%;
+    height: 20px;
+    font-family: Gotham-Ultra;
+    font-size: 20px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.4;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+    padding-top: 3px;
+}
+
+.Rectangle-Logo {
+    position: absolute;
+    top: 20px;
+    left: 50px;
+    z-index: 10000;
+    width: 123px;
+    height: 36px;
+}
+
+.LOGO {
+    width: 100%;
+    height: 20px;
+    font-family: Gotham-Italic;
+    font-size: 28px;
+    font-weight: 600;
+    font-style: italic;
+    font-stretch: normal;
+    line-height: 1.4;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #000;
+    padding-top: 3px;
+}
+
+._LANDING {
+    width: 100%;
+    max-height: 4299px;
+    background-color: #ffffff;
+}
+
+.ALL-IN-ONE-FOR-EVERYBODY {
+    width: 100%;
+    height: 80px;
+    font-family: Gotham;
+    font-size: 50px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.4;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+    align-self: center;
+}
+
+.image {
+    width: 100%;
+    /*max-height: 1029px;*/
+}
+
+a {
+    text-decoration: none;
+    color: #232323;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: tomato;
+}
+
+#menuToggle {
+    display: block;
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    z-index: 10000;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    right: -5px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 10001;
+    -webkit-touch-callout: none;
+}
+
+#menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #000;
+    border-radius: 3px;
+    z-index: 10000;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+    background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+    opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+    transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #fff;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+    position: absolute;
+    top: 10px;
+    width: 350px;
+    height: 2000px;
+    margin: -100px 0 0 -250px;
+    padding: 50px;
+    padding-top: 125px;
+    opacity: 1;
+    background-color: #019ee0;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0% 0%;
+    transform: translate(100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+.subMenu {
+    list-style-type: none;
+}
+
+#menu li {
+    padding: 10px 0;
+    font-size: 22px;
+}
+
+#menuToggle input:checked ~ ul {
+    transform: none;
+}
+
+.menuMainItem {
+    height: 25px;
+    font-family: Gotham;
+    font-size: 25px;
+    font-weight: 900;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.4;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+}
+
+.menuSubItem {
+    height: 18px;
+    font-family: Campton;
+    font-size: 15px;
+    font-weight: 900;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.2;
+    letter-spacing: 0.6px;
+    text-align: left;
+    color: #000000;
+}
+
+.titleText3 {
+    width: 628px;
+    height: 120px;
+    font-family: Campton;
+    font-size: 50px;
+    font-weight: 900;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+}
+
+.descriptionText3 {
+    width: 628px;
+    font-family: Campton-Light;
+    font-size: 25px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+}
+
+.doboz {
+    width: 263px;
+    height: 263px;
+    background-color: #019ee0;
+    margin: 0px 10px 122px 10px;
+}
+
+.titleText4 {
+    width: 50%;
+    height: 33px;
+    font-family: Campton;
+    font-size: 28px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.18;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+}
+
+.descriptionText4 {
+    width: 50%;
+    height: 62px;
+    font-family: HelveticaNeue;
+    font-size: 20px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.35;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+}
+
+.dobozTitleText {
+    height: 22px;
+    font-family: Campton;
+    font-size: 18px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.22;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+}
+
+.dobozDescText {
+    height: 62px;
+    font-family: HelveticaNeue;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.75;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+    margin: 15px 22px 0px 21px;
+}
+
+.titleText5 {
+    width: 457px;
+    height: 48px;
+    font-family: Campton;
+    font-size: 40px;
+    font-weight: 900;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+}
+
+.titleText {
+    height: 33px;
+    font-family: Campton;
+    font-size: 28px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.18;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000000;
+}
+
+.descriptionText {
+    height: 62px;
+    font-family: Campton-Light;
+    font-size: 20px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.35;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000000;
+    margin: 40px 243px 23px 0px;
+}
+
+.footerText {
+    height: 31px;
+    font-family: Campton-Light;
+    font-size: 20px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.35;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000000;
+    margin-top: 18px;
+}
+
+.menuMainItem {
+    margin: 10px 0px;
+}
+
+.menuSubItem {
+    margin: 4px 0px;
+}
+
+.menuLangItem {
+    margin: 75px 0px;
+}
+
+.menuSocialItem {
+    object-fit: contain;
+    font-family: Gotham-Light;
+    font-size: 15px;
+    font-weight: 900;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.4;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+    padding: 0px;
+}
+
+.menuSocialStartMargin {
+    margin-top: 255px;
+}
