@@ -119,10 +119,9 @@
 
 .LOGO {
     width: 100%;
-    height: 20px;
     font-family: Gotham-Italic;
     font-size: 28px;
-    font-weight: 600;
+    font-weight: 900;
     font-style: italic;
     font-stretch: normal;
     line-height: 1.4;
@@ -194,12 +193,12 @@
 
 a {
     text-decoration: none;
-    color: #232323;
+    color: #fff;
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: tomato;
+    color: #ffffff;
 }
 
 #menuToggle {
@@ -280,11 +279,46 @@ a:hover {
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
+@media (max-width: 550px) and (min-width: 400px) {
+    #menu {
+        width: 300px;
+        margin: -100px 0 0 -200px;
+    }
+}
+
+@media (max-width: 399px) and (min-width: 300px) {
+    #menu {
+        width: 250px;
+        margin: -100px 0 0 -150px;
+    }
+
+    .menuMainItem {
+        font-size: 18px !important;
+    }
+
+    .menuSubItem {
+        font-size: 14px !important;
+    }
+
+    .menuLangItem {
+        font-size: 16px !important;
+    }
+
+    .menuSocialItem {
+        font-size: 12px !important;
+    }
+}
+
 .subMenu {
     list-style-type: none;
 }
 
-#menu li {
+#menu .menuSubItem li {
+    padding: 10px 0;
+    font-size: 16px;
+}
+
+#menu .menuMainItem li {
     padding: 10px 0;
     font-size: 22px;
 }
@@ -345,8 +379,8 @@ a:hover {
 
 .doboz {
     background-color: #019ee0;
-    width: 20vw;
-    height: 20vw;
+    width: 10vw;
+    height: 10vw;
     display: flex;
 }
 
@@ -469,13 +503,14 @@ a:hover {
 }
 
 .menuLangItem {
-    margin: 75px 0px;
+    margin: 30% 0%;
+    color: #fff;
 }
 
 .menuSocialItem {
     object-fit: contain;
-    font-family: Gotham-Light;
-    font-size: 15px;
+    font-family: Gotham;
+    font-size: 14px;
     font-weight: 900;
     font-style: normal;
     font-stretch: normal;
@@ -487,7 +522,7 @@ a:hover {
 }
 
 .menuSocialStartMargin {
-    margin-top: 255px;
+    margin-top: 10%;
 }
 
 .forthSlide {
@@ -496,4 +531,45 @@ a:hover {
 
 .forthSlide .col-md-12 {
     margin: 2.5% 0%;
+}
+
+.footerColumnTitleText {
+    font-family: Gotham;
+    font-size: 15px;
+    font-weight: 900;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.4;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 5%;
+}
+
+.footerColumnText {
+    font-family: Campton-Light;
+    font-size: 10px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.8;
+    letter-spacing: 0.4px;
+    text-align: left;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.logoFooter {
+    width: 100%;
+    font-family: Gotham-Italic;
+    font-size: 34px;
+    font-weight: 900;
+    font-style: italic;
+    font-stretch: normal;
+    line-height: 1.4;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #fff;
+    padding-top: 3px;
 }
