@@ -378,9 +378,9 @@ a:hover {
 }
 
 .doboz {
-    background-color: #019ee0;
-    width: 10vw;
-    height: 10vw;
+    background-color: #1d9eda;
+    width: 14vw;
+    height: 14vw;
     display: flex;
 }
 
@@ -419,11 +419,11 @@ a:hover {
 
 .dobozTitleText {
     font-family: Campton;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 600;
     font-style: normal;
     font-stretch: normal;
-    line-height: 1.22;
+    line-height: 1.18;
     letter-spacing: normal;
     text-align: center;
     color: #fff;
@@ -526,8 +526,8 @@ a:hover {
 }
 
 .forthSlide {
-     margin: 7.5% -15px;
- }
+    margin: 7.5% -15px;
+}
 
 .forthSlide .col-md-12 {
     margin: 2.5% 0%;
@@ -572,4 +572,11 @@ a:hover {
     text-align: center;
     color: #fff;
     padding-top: 3px;
+}
+
+.karika {
+    background-color: #fff;
+    border-radius: 50%;
+    width: 5vw;
+    height: 5vw;
 }
