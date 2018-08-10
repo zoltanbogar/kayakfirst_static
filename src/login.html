@@ -13,63 +13,21 @@
         @font-face { font-family: Gotham-Ultra; src: url('../www/font/Gotham Ultra.otf'); }
         @font-face { font-family: Campton; src: url('../www/font/Campton-BoldDemo.otf'); }
         @font-face { font-family: Campton-Light; src: url('../www/font/Campton-LightDemo.otf'); }
+        @font-face { font-family: Klavika-Bold; src: url('../www/font/Klavika Bold.otf'); }
+        @font-face { font-family: Futura; src: url('../www/font/Futura Book font.ttf'); }
+        @font-face { font-family: Futura-Heavy; src: url('../www/font/Futura Heavy font.ttf'); }
     </style>
 
     <style>
         .titleText {
-            font-family: Gotham-Ultra;
+            font-family: Gotham;
             font-size: 50px;
-            font-weight: normal;
+            font-weight: 900;
             font-style: normal;
             font-stretch: normal;
             line-height: 1.4;
             letter-spacing: normal;
             text-align: center;
-            color: #fff;
-            text-transform: uppercase;
-        }
-
-        .addressTitle {
-            font-family: Gotham;
-            font-size: 35px;
-            font-weight: bold;
-            font-style: normal;
-            font-stretch: normal;
-            line-height: 1.4;
-            letter-spacing: normal;
-            text-align: left;
-            color: #ffffff;
-            text-transform: uppercase;
-        }
-
-        .addressAddress {
-            font-family: Gotham-Light;
-            font-size: 25px;
-            font-weight: 300;
-            font-style: normal;
-            font-stretch: normal;
-            line-height: 1.4;
-            letter-spacing: normal;
-            text-align: left;
-            color: #ffffff;
-        }
-
-        .sendButton {
-            border-radius: 5px;
-            background-color: #ffffff;
-            padding: 1% 2%;
-            display: inline-block;
-        }
-
-        .sendButtonText {
-            font-family: Gotham-Ultra;
-            font-size: 20px;
-            font-weight: normal;
-            font-style: normal;
-            font-stretch: normal;
-            line-height: 1.4;
-            letter-spacing: normal;
-            text-align: left;
             color: #191919;
             text-transform: uppercase;
         }
@@ -86,20 +44,103 @@
             margin: 1% 0;
         }
 
-        @media (min-width: 765px) {
-            .borderCorrectLeft {
-                padding-left: 1%;
-            }
-
-            .borderCorrectRigth {
-                padding-right: 1%;
-            }
+        .loginText {
+            font-family: Gotham;
+            font-size: 22px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.4;
+            letter-spacing: normal;
+            text-align: center;
+            color: #019ee0;
+            text-transform: uppercase;
+            margin: auto;
         }
 
-        @media (max-width: 764px) {
-            .borderCorrectLeft {
-                margin: 1% 0 0 0;
-            }
+        .forgotPass {
+            font-family: Gotham-Light;
+            font-size: 15px;
+            font-weight: 300;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.4;
+            letter-spacing: normal;
+            text-align: center;
+            color: #000;
+            text-transform: uppercase;
+        }
+
+        hr {
+            display: block;
+            height: 1px;
+            border: 0;
+            border-top: 1px solid #fff;
+            margin: 1em auto;
+            padding: 0;
+        }
+
+        .noAccount {
+            font-family: Gotham-Light;
+            font-size: 18px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.4;
+            letter-spacing: normal;
+            text-align: center;
+            color: #ffffff;
+            text-transform: uppercase;
+        }
+
+        .signUp {
+            color: #c62626 !important;
+            text-decoration: underline;
+        }
+
+        .socialKarika {
+            background-color: #fff;
+            border-radius: 50%;
+            width: 3vw;
+            height: 3vw;
+            background-color: #fff;
+            display: flex;
+            float: left;
+            margin: 0 2.5%;
+        }
+
+        .socialText {
+            margin: 2.5px auto;
+            color: #019ee0;
+            font-size: 46px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.4;
+            letter-spacing: normal;
+            text-align: center;
+        }
+
+        .socialTextFB {
+            font-family: Klavika-Bold;
+        }
+        .socialTextGoogle {
+            font-family: Futura-Heavy;
+            text-transform: uppercase;
+            margin: -2px auto;
+        }
+
+        .inputTextInput {
+            border-radius: 5px;
+            height: 60px;
+            line-height: 60px;
+            font-size:20px;
+            color: #a8a8a8;
+        }
+
+        .inputTextInput::placeholder {
+            color: #a8a8a8;
+            text-transform: uppercase;
         }
     </style>
 </head>
@@ -110,81 +151,58 @@
             <div class="container-fluid">
                 <div class="row" style="margin: 0 0 2.5% 0;">
                     <div class="col-md-12 titleText">
-                        Say hello to us!
+                        Please login
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12">
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-md-6" style="margin-bottom: 7.5%">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="addressTitle">
-                                                    Sales office
-                                                </div>
-                                                <div class="addressAddress">
-                                                    Valami út 76.<br />
-                                                    Budapest, HU<br />
-                                                    2222
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="addressTitle">
-                                                    Factory
-                                                </div>
-                                                <div class="addressAddress">
-                                                    Valami út 76.<br />
-                                                    Szeged, HU<br />
-                                                    2222
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="container inputHolder">
-                                        <div class="row">
-                                            <div class="col-md-6 borderCorrectRigth">
-                                                <input class="form-control" type="text" placeholder="NAME" style="border-radius: 5px;">
-                                            </div>
-                                            <div class="col-md-6 borderCorrectLeft">
-                                                <input class="form-control" type="text" placeholder="EMAIL" style="border-radius: 5px;">
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6 borderCorrectRigth">
-                                                <select class="form-control" style="border-radius: 5px;">
-                                                    <option>LEGÖRDÍTHETŐ OPCIÓK</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-md-6 borderCorrectLeft">
-                                                <input class="form-control" type="text" placeholder="COMPANY" style="border-radius: 5px;">
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <textarea class="form-control" name="message" id="message" rows="4"  style="border-radius: 5px;" placeholder="MESSAGE"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-12" style="text-align: right;">
-                                                <div class="sendButton">
-                                                    <div class="sendButtonText">Send</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="col-md-6 offset-md-3" style="padding: 0 5%; margin-bottom: 1.5%;">
+                        <input type="text" class="form-control inputTextInput" placeholder="EMAIL OR ACCOUNT NAME" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 offset-md-3" style="padding: 0 5%; margin-bottom: 3%;">
+                        <input type="text" class="form-control inputTextInput" placeholder="PASSWORD" />
+                    </div>
+                </div>
+                <div class="row" style="margin-bottom: 2%;">
+                    <div class="col-md-6 offset-md-3">
+                        <div class="karika" style="background-color: #191919; margin: auto; display: flex;">
+                            <div class="loginText">Login</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-bottom: 1%">
+                    <div class="col-md-6 offset-md-3">
+                        <div class="forgotPass">Forgot your password?</div>
+                    </div>
+                </div>
+                <div class="row" style="margin-bottom: 1%">
+                    <div class="col-md-6 offset-md-3">
+                        <hr>
+                    </div>
+                </div>
+                <div class="row" style="margin-bottom: 1.5%">
+                    <div class="col-md-6 offset-md-3 noAccount">
+                        <div>
+                            <span>Don't have an account?</span> <a href="../src/signup.html"><span class="signUp">Sign up!</span></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 offset-md-3 noAccount">or connect with</div>
+                </div>
+                <div class="row" style="margin-bottom: 10%">
+                    <div class="col-md-6 offset-md-3" style="display: flex; justify-content: center;">
+                        <div class="socialKarika">
+                            <div class="socialText socialTextFB">f</div>
+                        </div>
+                        <div class="socialKarika">
+                            <div class="socialText socialTextGoogle">g</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <iframe src="https://www.google.com/maps/d/embed?mid=1lvtOGgsza8KnlT-fsz90KEvKYjoDdjQo&hl=hu" width="100%" height="500px"></iframe>
+
     <div class="sixthSlide row" style="background-color: #000; padding: 1.5% 6%">
         <div class="col-md-6">
             <div class="container">
