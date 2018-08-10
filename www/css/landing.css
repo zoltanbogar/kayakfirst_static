@@ -405,7 +405,6 @@ a:hover {
 
 .descriptionText4 {
     width: 50%;
-    height: 62px;
     font-family: HelveticaNeue;
     font-size: 20px;
     font-weight: normal;
@@ -579,4 +578,136 @@ a:hover {
     border-radius: 50%;
     width: 5vw;
     height: 5vw;
+}
+
+@media (max-width: 1600px) {
+    .dobozDescText {
+        font-size: 10px;
+    }
+    .karika {
+        width: 4vw;
+        height: 4vw;
+    }
+    .dobozTitleText {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .dobozDescText {
+        font-size: 8px;
+    }
+    .karika {
+        width: 4vw;
+        height: 4vw;
+    }
+    .dobozTitleText {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .dobozDescText {
+        font-size: 7px;
+    }
+    .karika {
+        width: 3vw;
+        height: 3vw;
+    }
+    .dobozTitleText {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 800px) {
+    .dobozDescText {
+        font-size: 6px;
+    }
+    .karika {
+        width: 3vw;
+        height: 3vw;
+    }
+    .dobozTitleText {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 700px) {
+    .doboz {
+        width: 25vw;
+        height: 25vw;
+    }
+    .dobozDescText {
+        font-size: 8px;
+    }
+    .karika {
+        width: 4vw;
+        height: 4vw;
+    }
+    .dobozTitleText {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 575px) {
+    .doboz {
+        width: 25vw;
+        height: 25vw;
+    }
+    .dobozDescText {
+        font-size: 14px;
+    }
+    .karika {
+        width: 14vw;
+        height: 14vw;
+    }
+    .dobozTitleText {
+        font-size: 22px;
+    }
+
+    .titleText4 {
+        margin-bottom: 5%;
+    }
+}
+
+@media (max-width: 460px) {
+    .doboz {
+        width: 25vw;
+        height: 25vw;
+    }
+    .dobozDescText {
+        font-size: 12px;
+    }
+    .karika {
+        width: 12vw;
+        height: 12vw;
+    }
+    .dobozTitleText {
+        font-size: 18px;
+    }
+
+    .titleText4 {
+        margin-bottom: 8%;
+    }
+}
+
+@media (max-width: 390px) {
+    .doboz {
+        width: 25vw;
+        height: 25vw;
+    }
+    .dobozDescText {
+        font-size: 10px;
+    }
+    .karika {
+        width: 14vw;
+        height: 14vw;
+    }
+    .dobozTitleText {
+        font-size: 15px;
+    }
+
+    .titleText4 {
+        margin-bottom: 10%;
+    }
 }
