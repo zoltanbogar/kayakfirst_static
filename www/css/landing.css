@@ -1,9 +1,10 @@
 .Rectangle-5 {
-    width: 303px;
-    height: 59px;
     border-radius: 10px;
     background-color: #019ee0;
     align-self: center;
+    margin: 0 1.5%;
+    padding: 0 2%;
+    white-space: nowrap;
 }
 
 .aboveVideo {
@@ -79,20 +80,21 @@
     text-align: center;
     color: #ffffff;
     margin: 10px 0px;
+    text-transform: uppercase;
 }
 
 .Rectangle-7 {
     position: absolute;
     top: 20px;
-    right: 120px;
+    right: 10em;
 }
 
 .BUY-NOW-BOX {
     z-index: 10000;
-    width: 123px;
     height: 36px;
     border-radius: 5px;
     background-color: #c62626;
+    padding: 0 0.75%;
 }
 
 .BUY-NOW {
@@ -108,6 +110,7 @@
     text-align: center;
     color: #ffffff;
     padding-top: 3px;
+    text-transform: uppercase;
 }
 
 .Rectangle-Logo {
@@ -140,7 +143,7 @@
 .ALL-IN-ONE-FOR-EVERYBODY {
     width: 100%;
     font-family: Gotham;
-    font-size: 50px;
+    font-size: 75px;
     font-weight: 500;
     font-style: normal;
     font-stretch: normal;
@@ -149,6 +152,7 @@
     text-align: center;
     color: #fff;
     align-self: center;
+    text-transform: uppercase;
 }
 
 @media (max-width: 500px) {
@@ -221,6 +225,25 @@ a:hover {
     cursor: pointer;
     opacity: 0;
     z-index: 10001;
+    -webkit-touch-callout: none;
+}
+
+#menuToggle .menuPreText {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -9px;
+    right: 3em;
+    cursor: pointer;
+    opacity: 1;
+    z-index: 10001;
+    text-transform: uppercase;
+    color: #019ee0;
+    font-size: 1.7em;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+    color 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+    opacity 0.55s ease;
     -webkit-touch-callout: none;
 }
 
@@ -355,7 +378,7 @@ a:hover {
 
 .titleText3 {
     font-family: Campton;
-    font-size: 50px;
+    font-size: 60px;
     font-weight: 900;
     font-style: normal;
     font-stretch: normal;
@@ -457,23 +480,23 @@ a:hover {
 
 .titleText {
     font-family: Campton;
-    font-size: 28px;
-    font-weight: bold;
+    font-size: 60px;
+    font-weight: 900;
     font-style: normal;
     font-stretch: normal;
-    line-height: 1.18;
+    line-height: 1.2;
     letter-spacing: normal;
     text-align: left;
-    color: #000000;
+    color: #000000;text-transform: uppercase;
 }
 
 .descriptionText {
     font-family: Campton-Light;
-    font-size: 20px;
-    font-weight: normal;
+    font-size: 25px;
+    font-weight: 300;
     font-style: normal;
     font-stretch: normal;
-    line-height: 1.35;
+    line-height: 1.2;
     letter-spacing: normal;
     text-align: left;
     color: #000000;
@@ -481,16 +504,15 @@ a:hover {
 }
 
 .footerText {
-    font-family: Campton-Light;
-    font-size: 20px;
+    font-family: Gotham;
+    font-size: 25px;
     font-weight: 500;
     font-style: normal;
     font-stretch: normal;
-    line-height: 1.35;
+    line-height: 1.08;
     letter-spacing: normal;
     text-align: left;
-    color: #000000;
-    margin-top: 18px;
+    color: #191919;
 }
 
 .menuMainItem {
@@ -711,3 +733,203 @@ a:hover {
         margin-bottom: 10%;
     }
 }
+
+.text {
+    background-color: #2bff29;
+    color:#fff;
+    display:inline-block;
+    padding-left:4px;
+}
+.arrow {
+    border-style: dashed;
+    border-color: transparent;
+    border-width: 0.20em;
+    display: -moz-inline-box;
+    display: inline-block;
+    /* Use font-size to control the size of the arrow. */
+    font-size: 100px;
+    height: 0;
+    line-height: 0;
+    position: relative;
+    vertical-align: middle;
+    width: 0;
+    background-color:#fff; /* change background color acc to bg color */
+    border-left-width: 0.2em;
+    border-left-style: solid;
+    border-left-color: #2926ff;
+    left:0.25em;
+}
+
+.arrow_box {
+    position: relative;
+    background: #019ee0;
+    height: 90px;
+}
+.arrow_box:after {
+    left: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(1, 158, 224, 0);
+    border-left-color: #019ee0;
+    border-width: 45px;
+    margin-top: -45px;
+}
+
+.bounce {
+    -moz-animation: bounce 3s infinite;
+    -webkit-animation: bounce 3s infinite;
+    animation: bounce 3s infinite;
+    cursor: pointer;
+}
+@-moz-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        -moz-transform: translateY(0);
+        transform: translateY(0);
+    }
+    40% {
+        -moz-transform: translateY(-30px);
+        transform: translateY(-30px);
+    }
+    60% {
+        -moz-transform: translateY(-15px);
+        transform: translateY(-15px);
+    }
+}
+@-webkit-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    40% {
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px);
+    }
+    60% {
+        -webkit-transform: translateY(-15px);
+        transform: translateY(-15px);
+    }
+}
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    40% {
+        -moz-transform: translateY(-30px);
+        -ms-transform: translateY(-30px);
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px);
+    }
+    60% {
+        -moz-transform: translateY(-15px);
+        -ms-transform: translateY(-15px);
+        -webkit-transform: translateY(-15px);
+        transform: translateY(-15px);
+    }
+}
+
+.camera_caption{
+    width: 300px;
+    height: 54px;
+    background: #019ee0;
+    position: relative;
+    color: #fff;
+    font-family: Gotham-Ultra;
+    font-size: 30px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.4;
+    letter-spacing: normal;
+    text-align: center;
+    margin: auto;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+.camera_caption:after {
+    position: absolute;
+    right: -27px;
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 27px solid transparent;
+    border-bottom: 27px solid transparent;
+    border-left: 27px solid #019ee0;
+}
+
+.footer3List {
+    list-style: none;
+    color: #fff;
+
+    padding: 0;
+}
+
+.footer3List li:before {
+    content: '✓';
+}
+
+.listItemStrong {
+    margin-left: 1em;
+    font-family: Gotham;
+    font-size: 1.5em;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.4;
+    letter-spacing: normal;
+    text-align: left;
+    text-transform: lowercase;
+}
+
+.listItemLight {
+    margin-left: 0.25em;
+    font-family: Gotham-Light;
+    font-size: 1.25em;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.4;
+    letter-spacing: normal;
+    text-align: left;
+}
+
+.footer2List {
+    list-style: none;
+    color: #019ee0;
+    padding: 0;
+}
+
+.footer2List li:before {
+    content: '✓';
+}
+
+.listItemStrong2 {
+    margin-left: 1em;
+    font-family: Gotham;
+    font-size: 1.5em;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.4;
+    letter-spacing: normal;
+    text-align: left;
+    color: #191919;
+    text-transform: lowercase;
+}
+
+
+
+
+
+
+
+
+
+
