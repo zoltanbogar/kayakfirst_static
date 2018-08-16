@@ -236,7 +236,7 @@
 		var makeCentral = function() {	
 
 			// all previous images total width	
-			console.log('calling makeCentral');
+			//console.log('calling makeCentral');
 			var prevImgWidth = 0;	
 			for( var i = 0; i < $activeIndex; i++ ) {
 				prevImgWidth += $imageWidths[i];
@@ -441,9 +441,9 @@
 			// if scroll bar hides due to resize, the old window width becomes incorrect 
 			clearTimeout(windowWidthTimer);
 			windowWidthTimer = setTimeout(function() {
-				windowWidth = $( window ).width() + windowWidthAddedPadding;		        
+				windowWidth = $( window ).width() + windowWidthAddedPadding;
+                showNextSlide();
 			}, 1000);	// the delay shoudld be sufficiently bigger than the one use above	
-
 
 		};
 

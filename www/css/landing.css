@@ -225,7 +225,18 @@ a:hover {
     cursor: pointer;
     opacity: 0;
     z-index: 10001;
-    -webkit-touch-callout: none;
+}
+
+#menuToggle .menuInput {
+    display: block;
+    width: 60px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    right: 50px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 10001;
 }
 
 #menuToggle .menuPreText {
@@ -233,14 +244,13 @@ a:hover {
     width: 40px;
     height: 32px;
     position: absolute;
-    top: -9px;
+    top: -7px;
     right: 3em;
-    cursor: pointer;
     opacity: 1;
     z-index: 10001;
     text-transform: uppercase;
     color: #019ee0;
-    font-size: 1.7em;
+    font-size: 1.5em;
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
     color 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
     opacity 0.55s ease;
@@ -517,6 +527,7 @@ a:hover {
 
 .menuMainItem {
     margin: 10px 0px;
+    text-transform: uppercase;
 }
 
 .menuSubItem {
@@ -890,7 +901,7 @@ a:hover {
 
 .listItemLight {
     margin-left: 0.25em;
-    font-family: Gotham-Light;
+    font-family: Campton-Light;
     font-size: 1.25em;
     font-weight: normal;
     font-style: normal;
@@ -924,12 +935,27 @@ a:hover {
     text-transform: lowercase;
 }
 
+.socialKarika2 {
+    background-color: #fff;
+    border-radius: 50%;
+    width: 1.5vw;
+    height: 1.5vw;
+    background-color: #fff;
+    display: flex;
+    float: left;
+    margin: 0 2.5%;
+}
 
 
 
+.socialTextFB {
+    font-family: Klavika-Bold;
+    margin: -7px auto 0 auto !important;
+}
 
-
-
-
-
+.menuSocialBottom {
+    position: fixed;
+    bottom: 10%;
+    width: 10%;
+}
 
