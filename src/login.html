@@ -408,7 +408,7 @@
         if($('.inputTextInputUsername').val() != "" && $('.inputTextInputPassword').val() != ""){
             $.ajax({
                 type: "POST",
-                url: 'http://traininglog.kayakfirst.com/api/login',
+                url: 'http://api.kayakfirst.com/api/login',
                 data: ({
                     username: $('.inputTextInputUsername').val()
                     , password: $('.inputTextInputPassword').val()
@@ -416,7 +416,7 @@
                 dataType: "json",
                 success: function(data){
                     alert('Logged In!');
-                    ajax_ecwid_login();
+                    ajax_ecwid_login(data.user.email, data.user.firstName, data.user.lastName);
                 },
                 error: function(XMLHttpRequest, textStatus, errorThrown) {
                     console.log(XMLHttpRequest, textStatus, errorThrown);
@@ -434,16 +434,21 @@
         var ecwid_sso_profile = '';
     }
 
-    var ajax_ecwid_login = () => {
+    var ajax_ecwid_login = (email, firstName, lastName) => {
         $.ajax({
             type: "POST",
-            url: 'http://traininglog.kayakfirst.com/ecwid_login',
+            url: 'http://127.0.0.1:8000/api/api_ecwid_login',
             data: ({
+                email: email
+                , firstName: firstName
+                , lastName: lastName
             }),
             dataType: "json",
             success: function(data){
                 ecwid_sso_profile = data.ecwid_sso_profile;
                 loadScript("https://app.ecwid.com/script.js?14262098&data_platform=code&data_date=2018-07-09", runProd);
+                console.log(ecwid_sso_profile);
+                localStorage.setItem('ecwid_sso_profile', ecwid_sso_profile);
             },
             error: function(XMLHttpRequest, textStatus, errorThrown) {
                 console.log(XMLHttpRequest, textStatus, errorThrown);

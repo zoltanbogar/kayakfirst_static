@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kayakfirst</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="../www/css/landing.css" rel="stylesheet">
+
+    <style>
+        @font-face { font-family: Gotham; src: url('../www/font/Gotham-Bold.otf'); }
+        @font-face { font-family: Gotham-Light; src: url('../www/font/Gotham-Light.otf'); }
+        @font-face { font-family: Gotham-Italic; src: url('../www/font/Gotham-BookItalic.otf'); }
+        @font-face { font-family: Gotham-Ultra; src: url('../www/font/Gotham Ultra.otf'); }
+        @font-face { font-family: Campton; src: url('../www/font/Campton-BoldDemo.otf'); }
+        @font-face { font-family: Campton-Light; src: url('../www/font/Campton-LightDemo.otf'); }
+
+        .loadingOverlay {
+            position: fixed; /* Sit on top of the page content */
+            display: block; /* Hidden by default */
+            width: 100%; /* Full width (cover the whole page) */
+            height: 100%; /* Full height (cover the whole page) */
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(29, 158, 218, 1); /* Black background with opacity */
+            z-index: 20000; /* Specify a stack order in case you're using a different order for other elements */
+        }
+
+        .loadingOverlayText {
+            font-family: Gotham-Italic;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            font-size: 50px;
+            transform: translate(-50%,-50%);
+            -ms-transform: translate(-50%,-50%);
+            font-weight: 900;
+            font-style: italic;
+            font-stretch: normal;
+            line-height: 1.4;
+            letter-spacing: 2px;
+            text-align: center;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        .loadingOverlaySpinner {
+            position: absolute;
+            top: calc(50% + 25px);
+            left: calc(50% - 25px);
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(255,255,255,.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+            -webkit-animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { -webkit-transform: rotate(360deg); }
+        }
+        @-webkit-keyframes spin {
+            to { -webkit-transform: rotate(360deg); }
+        }
+    </style>
+
+    <style>
+        @media (max-width: 500px) {
+            .firstSlide {
+                margin: 15% 10% !important;
+            }
+        }
+
+        .titleProd {
+            color: #000;
+            font-family: Gotham;
+            font-size: 50px;
+            font-weight: 900;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.4;
+            letter-spacing: normal;
+            text-transform: uppercase;
+        }
+
+        .titleProdDesc {
+            font-family: Gotham-Light;
+            font-size: 30px;
+            font-weight: 300;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.33;
+            letter-spacing: 0.1px;
+            text-align: left;
+            color: #191919;
+        }
+
+        .productName {
+            font-family: Gotham;
+            font-size: 70px;
+            font-weight: 900;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.4;
+            letter-spacing: normal;
+            text-align: left;
+            color: #191919;
+        }
+
+        @media (max-width: 991px) {
+            .productBuyNow {
+                position: unset !important;
+                margin-bottom: 3%;
+            }
+        }
+    </style>
+</head>
+<body style="margin: 0px; overflow-x: hidden;">
+<div class="._LANDING container-fluid" style="padding: 0px !important;">
+    <div class="firstSlide row section" style="margin: 10% 10% 0% 10%;">
+        <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12" style="display: flex; flex-direction: column;">
+            <div> <script type='text/javascript' src='https://app.ecwid.com/script.js?14262098'></script>
+                <script type='text/javascript'>
+                    xProductBrowser("defaultProductId=113512569");
+                </script>
+            </div>
+        </div>
+    </div>
+    <div class="sixthSlide row" style="background-color: #000; padding: 1.5% 6%">
+        <div class="col-md-6">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div>
+                            <a href="../src/product.html" style="cursor: pointer"><div class="footerColumnText">Products</div></a>
+                            <a href="../src/contact.html" style="cursor: pointer"><div class="footerColumnText">Contact us</div></a>
+                            <a href="../src/ourStory.html" style="cursor: pointer"><div class="footerColumnText">Our story</div></a>
+                            <a href="http://kayakfirst.com/terms-conditions" target="_blank"><div class="footerColumnText">Terms and conditions</div></a>
+                            <a href="../src/terms.html" target="_blank"><div class="footerColumnText">Terms and conditions2</div></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div>
+                            <a href="https://www.facebook.com/kayakfirst/" target="_blank"><div class="footerColumnText">Facebook</div></a>
+                            <a href="https://www.instagram.com/kayakfirst/" target="_blank"><div class="footerColumnText">Instagram</div></a>
+                            <a href="https://www.youtube.com/channel/UCp7DATOyhVHq4t1so84czRQ" target="_blank"><div class="footerColumnText">Youtube</div></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6" style="margin: auto; display: flex; flex-direction: column;">
+            <div style="align-self: flex-end;">
+                <div class="logoFooter">KAYAKFIRST</div>
+            </div>
+        </div>
+    </div>
+
+    <a href="../src/product.html">
+        <div class="Rectangle-7 BUY-NOW-BOX">
+            <div class="BUY-NOW">BUY NOW</div>
+        </div>
+    </a>
+    <a href="../index.html">
+        <div class="Rectangle-Logo">
+            <div class="LOGO">KAYAKFIRST</div>
+        </div>
+    </a>
+    <nav role="navigation">
+        <div id="menuToggle">
+            <div class="menuPreText">Menu</div>
+            <input type="checkbox" />
+            <input type="checkbox" class="menuInput"/>
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul id="menu">
+                <div style="margin: 0% 0% 50% 0%">
+                    <a href="../src/product.html"><li class="menuMainItem" style="margin: 10% 0%">PRODUCTS</li></a>
+                    <a href="../src/ourStory.html"><li class="menuMainItem" style="margin: 10% 0%">OUR STORY</li></a>
+                    <a href="../src/contact.html"><li class="menuMainItem" style="margin: 10% 0%">CONTACT</li></a>
+                    <a href="http://traininglog.kayakfirst.com" target="_blank"><li class="menuMainItem" style="margin: 10% 0%">Training log</li></a>
+                </div>
+                <a href="../src/login.html"><li class="menuMainItem">LOGIN</li></a>
+                <div class="menuSocialBottom">
+                    <div style="display: flex; flex-direction: row; justify-content: space-around">
+                        <a href="https://www.facebook.com/kayakfirst/" target="_blank">
+                            <li class="menuSocialItem">
+                                <div class="socialKarika2">
+                                    <div class="socialText socialTextFB">f</div>
+                                </div>
+                            </li>
+                        </a>
+                        <a href="https://www.linkedin.com/in/jozsefweimper/" target="_blank">
+                            <li class="menuSocialItem">
+                                <div class="socialKarika2">
+                                    <img class="socialText" src="../www/image/icons/linkedin.svg" style="max-width: 100%; padding: 15%;" />
+                                </div>
+                            </li>
+                        </a>
+                        <a href="https://www.instagram.com/kayakfirst/" target="_blank">
+                            <li class="menuSocialItem">
+                                <div class="socialKarika2">
+                                    <img class="" src="../www/image/icons/instagram-new.png" style="max-width: 100%; padding: 15%" />
+                                </div>
+                            </li>
+                        </a></div>
+                </div>
+            </ul>
+        </div>
+    </nav>
+</div>
+<div class="loadingOverlay">
+    <div class="loadingOverlayText">Kayakfirst</div>
+    <div class="loadingOverlaySpinner"></div>
+</div>
+<script src="../www/js/jquery-3.1.1.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js" integrity="sha384-pjaaA8dDz/5BgdFUPX6M/9SUZv4d12SUPF0axWc+VRZkx5xU3daN+lYb49+Ax+Tl" crossorigin="anonymous"></script>
+<script>
+    var interval = 0;
+
+    $(function(){
+        interval = setInterval(runFunction, 1000);
+    });
+
+    var runFunction = () => {
+        if($('.ec-breadcrumbs').length < 3){
+        } else {
+            $('.ec-footer').hide();
+            $.each($('div.ec-breadcrumbs a.breadcrumbs__link'), function(i,e){
+                $(e).after('<a class="breadcrumbs__link ec-link breadcrumbs__link--last" href="../src/product.html">Back to the product page</a>').remove();
+            });
+            clearInterval(interval);
+            $('.loadingOverlay').remove();
+        }
+    }
+</script>
+</body>
+</html>
