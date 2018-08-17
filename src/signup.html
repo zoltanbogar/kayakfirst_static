@@ -510,7 +510,7 @@
         <div class="col-md-6">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <div>
                             <a href="../src/product.html" style="cursor: pointer"><div class="footerColumnText">Products</div></a>
                             <a href="../src/contact.html" style="cursor: pointer"><div class="footerColumnText">Contact us</div></a>
@@ -519,7 +519,7 @@
                             <a href="../src/terms.html" target="_blank"><div class="footerColumnText">Terms and conditions2</div></a>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <div>
                             <a href="https://www.facebook.com/kayakfirst/" target="_blank"><div class="footerColumnText">Facebook</div></a>
                             <a href="https://www.instagram.com/kayakfirst/" target="_blank"><div class="footerColumnText">Instagram</div></a>
@@ -706,7 +706,7 @@
         if(counter == 0){
            $.ajax({
                 type: "POST",
-                url: 'http://127.0.0.1:8000/api/register',
+                url: 'http://traininglog.kayakfirst.com/api/register',
                 data: ({
                     username: $('.inputUsername').val()
                     , password: $('.inputPassword').val()
