@@ -796,7 +796,7 @@
     let productCircleButton = $('.productCircleButton');
     productCircleButton.on('click', function(event){
         var objTarget = event.target;
-        console.log(objTarget);
+        if($(objTarget).hasClass('productCircleButton')) objTarget = $(event.target).children();
         var productType = $(objTarget).closest('.divTileContainer').attr('name');
         if(objProduct[productType]){
             $(objTarget).closest('.productCircleInner').text('+');

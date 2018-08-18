@@ -8,6 +8,7 @@
     <link href="../www/css/jquery-ui.min.css" rel="stylesheet">
     <link href="../www/css/jquery-ui.structure.min.css" rel="stylesheet">
     <link href="../www/css/jquery-ui.theme.min.css" rel="stylesheet">
+    <link href="../www/css/snackbar/snackbar.css" rel="stylesheet">
     <link href="../www/css/landing.css" rel="stylesheet">
 
     <style>
@@ -595,6 +596,7 @@
 <script src="../www/js/jquery-3.1.1.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js" integrity="sha384-pjaaA8dDz/5BgdFUPX6M/9SUZv4d12SUPF0axWc+VRZkx5xU3daN+lYb49+Ax+Tl" crossorigin="anonymous"></script>
 <script src="../www/js/jquery-ui.min.js"></script>
+<script src="../www/js/snackbar/snackbar.js"></script>
 <script>
     $('select').each(function () {
         var $this = $(this),
@@ -721,15 +723,19 @@
                 }),
                 dataType: "json",
                 success: function(data){
-                    alert('Successfully registered!');
+                    Snackbar.show({text: 'Successfully registered!', backgroundColor: '#191919', actionTextColor: '#1d9eda', fontFamily: 'Gotham-Light', duration: 5000, pos: 'top-center', borderRadius: '10px', onClose: goToLogin});
                 },
                 error: function(XMLHttpRequest, textStatus, errorThrown) {
                     console.log(XMLHttpRequest, textStatus, errorThrown);
-                    alert(errorThrown);
+                    Snackbar.show({text: 'Unexpected error!', backgroundColor: '#191919', actionTextColor: '#1d9eda', fontFamily: 'Gotham-Light', duration: 5000, pos: 'top-center', borderRadius: '10px'});
                 }
             });
         }
     });
+
+    var goToLogin = () => {
+        window.location.replace('http://v2.kayakfirst.com/src/login.html');
+    }
 </script>
 </body>
 </html>
