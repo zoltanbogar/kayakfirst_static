@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <!--<link rel="stylesheet" type="text/css" href="./www/css/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="./www/css/slick/slick-theme.css"/>-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="./www/css/fancyBox/jquery.fancybox.css" />
     <link rel="stylesheet" type="text/css" href="./www/css/hslider/style.css"/>
     <link href="./www/css/landing.css" rel="stylesheet">
 
@@ -33,20 +33,20 @@
 </head>
 <body style="margin: 0px; overflow-x: hidden;">
     <div class="._LANDING container-fluid" style="padding: 0px !important;">
-        <div class="firstSlide row section" style="justify-content: center; background-color: #1d9eda">
+        <div class="firstSlide row section" style="justify-content: center;">
             <div class="image col-xs-12 col-md-12 col-sm-12 col-lg-12" style="padding-right: 0">
-                <div>
+
                     <video id="video1" width="100%" loop muted autoplay>
-                        <source src="./www/video/Galaxy%20Video%20Background.mp4" type="video/mp4">
+                        <source src="./www/video/KAYAKIRST_FRONTPAGE.mp4" type="video/mp4">
                         Your browser does not support HTML5 video.
                     </video>
-                </div>
+
                 <div class="aboveVideo">
-                    <div class="ALL-IN-ONE-FOR-EVERYBODY" style="margin-bottom: 2.5%;">
-                        <span>Universal paddle machine</span>
+                    <div class="ALL-IN-ONE-FOR-EVERYBODY" style="margin-bottom: 2.5%; color: #019ee0;">
+                        Universal paddle machine
                     </div>
                     <div style="display: flex; flex-direction: row; align-self: center; /*margin-top: 2.5%;*/ width: 100%; justify-content: center;">
-                        <a data-fancybox="gallery" href="https://www.youtube.com/watch?v=dE7DCF_s7HQ" class="Rectangle-5">
+                        <a data-fancybox="gallery" href="./www/video/KAYAKIRST_FRONTPAGE.mp4" class="Rectangle-5">
                         <div>
                             <div class="PLAY-THE-VIDEO"><i class="fa fa-play"></i> Play the video</div>
                         </div>
@@ -177,7 +177,6 @@
                                 <a href="./src/product.html" style="cursor: pointer"><div class="footerColumnText">Products</div></a>
                                 <a href="./src/contact.html" style="cursor: pointer"><div class="footerColumnText">Contact us</div></a>
                                 <a href="./src/ourStory.html" style="cursor: pointer"><div class="footerColumnText">Our story</div></a>
-                                <a href="http://kayakfirst.com/terms-conditions" target="_blank"><div class="footerColumnText">Terms and conditions</div></a>
                                 <a href="./src/terms.html" target="_blank"><div class="footerColumnText">Terms and conditions2</div></a>
                             </div>
                         </div>
@@ -195,7 +194,8 @@
             </div>
             <div class="col-md-6" style="margin: auto; display: flex; flex-direction: column;">
                 <div style="align-self: flex-end;">
-                    <div class="logoFooter">KAYAKFIRST</div>
+                    <div class="logoFooter" style="max-width: 75%; margin: auto;">
+                        <img src="www/image/logo/kayakfirst_app_logo_white@3x.png" style="max-width: 100%; height: auto;" class="img-fluid" /></div>
                 </div>
             </div>
         </div>
@@ -207,7 +207,9 @@
         </a>
         <a href="./index.html">
             <div class="Rectangle-Logo">
-                <div class="LOGO">KAYAKFIRST</div>
+                <div class="LOGO" style="max-width: 75%;">
+                    <img src="www/image/logo/kayakfirst_app_logo.png" class="img-fluid" style="max-width: 100%; height: auto;" />
+                </div>
             </div>
         </a>
         <!--<nav role="navigation">
