@@ -875,6 +875,35 @@ a:hover {
     border-left: 27px solid #019ee0;
 }
 
+.camera_caption_white{
+    width: 300px;
+    height: 54px;
+    background: #fff;
+    position: relative;
+    color: #fff;
+    font-family: Gotham-Ultra;
+    font-size: 30px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.4;
+    letter-spacing: normal;
+    text-align: center;
+    margin: auto;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+.camera_caption_white:after {
+    position: absolute;
+    right: -27px;
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 27px solid transparent;
+    border-bottom: 27px solid transparent;
+    border-left: 27px solid #fff;
+}
+
 .footer3List {
     list-style: none;
     color: #fff;
