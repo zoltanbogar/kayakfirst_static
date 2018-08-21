@@ -306,7 +306,7 @@
         }
 
         .respHelper {
-            margin: 2.5%;
+            /*margin: 2.5%;*/
         }
 
         .productTagHidden {
@@ -552,6 +552,22 @@
             }
         }
 
+        .clear:before, .clear:after {
+            content: "\0020";
+            display: block;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .clear:after {
+            clear: both;
+        }
+
+        .img-fluid-60 {
+            width: 60%;
+            height: auto;
+        }
+
     </style>
 </head>
 <body style="margin: 0px; overflow-x: hidden;">
@@ -605,15 +621,15 @@
         <div class="container-fluid">
             <div class="row" style="padding: 0 0 15px 0">
                 <div class="col-xs-6 col-md-6 divTileContainer" name="canoe">
-                    <div class="divTile" style="border-radius: 10px; background-color: #c9c9c9; display: flex; flex-direction: row; justify-content: space-evenly">
+                    <div class="divTile " style="border-radius: 10px; background-color: #c9c9c9; display: block; /*display: flex; flex-direction: row; justify-content: space-evenly*/">
                         <div class="respHelper">
-                            <div class="productCircleButton" style="">
+                            <div class="productCircleButton" style="position: absolute;">
                                 <div class="productCircleInner" style="color: #c9c9c9">+</div>
                             </div>
                             <div class="productNameTag productTagHidden" style="text-transform: uppercase; color: #1d9eda; font-family: Gotham-Ultra">Canoe</div>
                         </div>
-                        <img src="../www/image/KAYAKFIRST_STUDIO_009_tr_200.png" alt="" class="img-responsive tileImg tileImgLT" style="">
-                        <div class="productNameTag productTagShown" style="text-transform: uppercase; color: #1d9eda; font-family: Gotham-Ultra">Canoe</div>
+                        <img src="../www/image/kayak_black_and_white_right.jpg" alt="" class="img-fluid-60" style="margin: 10% 0% 5% 2.5%;">
+                        <div class="productNameTag productTagShown" style="text-transform: uppercase;color: #1d9eda;font-family: Gotham-Ultra;position: absolute;top: 0;right: 3%;">Canoe</div>
                     </div>
                 </div>
                 <div class="col-xs-6 col-md-6 divTileContainer" name="kayak">
@@ -803,12 +819,18 @@
                 .css('background-color', '#c9c9c9');
             $(objTarget).closest('.productCircleInner')
                 .css('color', '#c9c9c9');
+            $(objTarget).closest('.divTile')
+                .children('img.img-fluid-60')
+                .prop('src', '../www/image/kayak_black_and_white_right.jpg');
         } else {
             $(objTarget).closest('.productCircleInner').text('✓');
             $(objTarget).closest('.divTile')
                 .css('background-color', '#191919');
             $(objTarget).closest('.productCircleInner')
                 .css('color', '#191919');
+            $(objTarget).closest('.divTile')
+                .children('img.img-fluid-60')
+                .prop('src', '../www/image/kayak_black_and_white_right_active.jpg');
         }
         objProduct[productType] = !objProduct[productType];
     });
