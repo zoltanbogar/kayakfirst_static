@@ -190,6 +190,7 @@
             </div>
         </div>
     </a>
+    <div class="navbarBackground" style="position: absolute; top: 0%; left: 0%; width: 100%; background-color: #019ee0; height: 85px; z-index: 9000;"></div>
     <nav role="navigation">
         <div id="menuToggle">
             <div class="menuPreText">Menu</div>
@@ -205,30 +206,25 @@
                     <a href="../src/contact.html"><li class="menuMainItem" style="margin: 10% 0%">CONTACT</li></a>
                     <a href="http://traininglog.kayakfirst.com" target="_blank"><li class="menuMainItem" style="margin: 10% 0%">Training log</li></a>
                 </div>
-                <a href="../src/login.html"><li class="menuMainItem">LOGIN</li></a>
+                <a href="../src/login.html"><li class="menuMainItem loginMenuItem">LOGIN</li></a>
                 <div class="menuSocialBottom">
                     <div style="display: flex; flex-direction: row; justify-content: space-around">
                         <a href="https://www.facebook.com/kayakfirst/" target="_blank">
                             <li class="menuSocialItem">
-                                <div class="socialKarika2">
-                                    <div class="socialText socialTextFB">f</div>
-                                </div>
+                                <img class="socialText" src="../www/image/icons/facebook_menu_icon.png" style="max-width: 32px; max-height: 32px; padding: 15%;" />
                             </li>
                         </a>
                         <a href="https://www.linkedin.com/in/jozsefweimper/" target="_blank">
                             <li class="menuSocialItem">
-                                <div class="socialKarika2">
-                                    <img class="socialText" src="../www/image/icons/linkedin.svg" style="max-width: 100%; padding: 15%;" />
-                                </div>
+                                <img class="socialText" src="../www/image/icons/linkedin_menu_icon.png" style="max-width: 32px; max-height: 32px; padding: 15%;" />
                             </li>
                         </a>
                         <a href="https://www.instagram.com/kayakfirst/" target="_blank">
                             <li class="menuSocialItem">
-                                <div class="socialKarika2">
-                                    <img class="" src="../www/image/icons/instagram-new.png" style="max-width: 100%; padding: 15%" />
-                                </div>
+                                <img class="socialText" src="../www/image/icons/instagram_menu_icon.png" style="max-width: 32px; max-height: 32px; padding: 15%;" />
                             </li>
-                        </a></div>
+                        </a>
+                    </div>
                 </div>
             </ul>
         </div>
@@ -243,6 +239,9 @@
 <script>
     var interval = 0;
     var noInfLoop = 0;
+    var isMenuOpened = false;
+    var menuPreTextColor = '';
+    var menuSpanColor = '';
 
     var loadScript = (url, callback) => {
         var script = document.createElement("script");
@@ -291,7 +290,7 @@
         });
     };
 
-    ajax_ecwid_login();
+    //ajax_ecwid_login();
 
     $(function(){
         interval = setInterval(runFunction, 100);
@@ -302,18 +301,60 @@
         if($('.ec-breadcrumbs').length > 2){
             setProductLayout();
         }
-        if(noInfLoop >= 50){
+        if(noInfLoop >= 100){
             clearInterval(interval);
         }
     }
 
     var setProductLayout = () => {
         $('.ec-footer').hide();
-        $.each($('div.ec-breadcrumbs a.breadcrumbs__link'), function(i,e){
-            $(e).after('<a class="breadcrumbs__link ec-link breadcrumbs__link--last" href="../src/product.html">Back to the product page</a>').remove();
-        });
         clearInterval(interval);
         $('.loadingOverlay').remove();
+    };
+
+    $(document).ready(function () {
+        $(window).scroll(function(){
+            if($(this).scrollTop() < $("div.navbarBackground").offset().top + 85 - 32){
+                $('#menuToggle span').css('background-color', '#fff');
+                if(isMenuOpened){
+                    $('.menuPreText').css('color', 'red');
+                } else {
+                    $('.menuPreText').css('color', '#fff');
+                }
+            }
+            if($(this).scrollTop() > $("div.navbarBackground").offset().top + 85 - 32){
+                $('.menuPreText').css('color', '#019ee0');
+                if(isMenuOpened){
+                    $('#menuToggle span').css('background-color', 'yellow');
+                } else {
+                    $('#menuToggle span').css('background-color', '#019ee0');
+                }
+            }
+        });
+    });
+
+    $('#menuToggle input').on('click', function(){
+        isMenuOpened = !isMenuOpened;
+        if(isMenuOpened){
+            menuPreTextColor = $('.menuPreText').css('color');
+            menuSpanColor = $('#menuToggle span').css('background-color');
+            $('.menuPreText').css('color', '#019ee0');
+            $('#menuToggle span').css('background-color', '#fff');
+        } else {
+            $('.menuPreText').css('color', menuPreTextColor);
+            $('#menuToggle span').css('background-color', menuSpanColor);
+        }
+
+        $.each($('#menuToggle input'), function(i,e){
+            $(e).prop('checked', isMenuOpened);
+        });
+    });
+
+    if(localStorage.getItem('ecwid_email') != null){
+        $('.loginMenuItem')
+            .text('Welcome ' + localStorage.getItem('ecwid_firstName') + ' ' + localStorage.getItem('ecwid_lastName') + '!')
+            .parent('a')
+            .prop('href', '#');
     }
 </script>
 </body>

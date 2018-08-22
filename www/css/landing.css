@@ -204,6 +204,9 @@ a {
 a:hover {
     color: #ffffff;
 }
+a:hover.whiteBackBlueUnderline {
+    color: #019ee0;
+}
 
 #menuToggle {
     display: block;

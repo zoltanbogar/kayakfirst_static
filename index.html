@@ -100,7 +100,7 @@
                     </ul>
                 </div>
                 <div class="footerText3" style="margin: 5% 5%;">
-                    <a data-fancybox="gallery" href="https://www.youtube.com/watch?v=tv5E_k8o0_o" style="cursor: pointer">
+                    <a class="whiteBackBlueUnderline" data-fancybox="gallery" href="https://www.youtube.com/watch?v=tv5E_k8o0_o" style="cursor: pointer">
                         <div class="col-xs-12 col-md-6 offset-md-2 BUY-NOW-BOX-COL" style="text-align: -webkit-right;">
                             <div class="">
                                 <div class="camera_caption_white" style="display: flex; justify-content: center;">
@@ -280,28 +280,22 @@
                         <a href="./src/contact.html"><li class="menuMainItem" style="margin: 10% 0%">CONTACT</li></a>
                         <a href="http://traininglog.kayakfirst.com" target="_blank"><li class="menuMainItem" style="margin: 10% 0%">Training log</li></a>
                     </div>
-                    <a href="./src/login.html"><li class="menuMainItem">LOGIN</li></a>
+                    <a href="./src/login.html"><li class="menuMainItem loginMenuItem">LOGIN</li></a>
                     <div class="menuSocialBottom">
                         <div style="display: flex; flex-direction: row; justify-content: space-around">
                         <a href="https://www.facebook.com/kayakfirst/" target="_blank">
                             <li class="menuSocialItem">
-                                <div class="socialKarika2">
-                                    <div class="socialText socialTextFB">f</div>
-                                </div>
+                                <img class="socialText" src="./www/image/icons/facebook_menu_icon.png" style="max-width: 32px; max-height: 32px; padding: 15%;" />
                             </li>
                         </a>
                         <a href="https://www.linkedin.com/in/jozsefweimper/" target="_blank">
                             <li class="menuSocialItem">
-                                <div class="socialKarika2">
-                                    <img class="socialText" src="./www/image/icons/linkedin.svg" style="max-width: 100%; padding: 15%;" />
-                                </div>
+                                <img class="socialText" src="./www/image/icons/linkedin_menu_icon.png" style="max-width: 32px; max-height: 32px; padding: 15%;" />
                             </li>
                         </a>
                         <a href="https://www.instagram.com/kayakfirst/" target="_blank">
                             <li class="menuSocialItem">
-                                <div class="socialKarika2">
-                                    <img class="" src="./www/image/icons/instagram-new.png" style="max-width: 100%; padding: 15%" />
-                                </div>
+                                <img class="socialText" src="./www/image/icons/instagram_menu_icon.png" style="max-width: 32px; max-height: 32px; padding: 15%;" />
                             </li>
                         </a></div>
                     </div>
@@ -391,6 +385,13 @@
             auto: false,
             delay: 4000
         });
+
+        if(localStorage.getItem('ecwid_email') != null){
+            $('.loginMenuItem')
+                .text('Welcome ' + localStorage.getItem('ecwid_firstName') + ' ' + localStorage.getItem('ecwid_lastName') + '!')
+                .parent('a')
+                .prop('href', '#');
+        }
     </script>
 </body>
 </html>
