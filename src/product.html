@@ -626,10 +626,10 @@
                             <div class="productCircleButton" style="position: absolute;">
                                 <div class="productCircleInner" style="color: #c9c9c9">+</div>
                             </div>
-                            <div class="productNameTag productTagHidden" style="text-transform: uppercase; color: #1d9eda; font-family: Gotham-Ultra">Canoe</div>
+                            <div class="productNameTag productTagHidden" style="text-transform: uppercase; color: #1d9eda; font-family: Gotham-Ultra">Kayak</div>
                         </div>
                         <img src="../www/image/kayak_black_and_white_right.jpg" alt="" class="img-fluid-60" style="margin: 10% 0% 5% 2.5%;">
-                        <div class="productNameTag productTagShown" style="text-transform: uppercase;color: #1d9eda;font-family: Gotham-Ultra;position: absolute;top: 0;right: 3%;">Canoe</div>
+                        <div class="productNameTag productTagShown" style="text-transform: uppercase;color: #1d9eda;font-family: Gotham-Ultra;position: absolute;top: 0;right: 3%;">Kayak</div>
                     </div>
                 </div>
                 <div class="col-xs-6 col-md-6 divTileContainer" name="kayak">
@@ -649,16 +649,16 @@
             </div>
             <div class="row" style="padding: 15px 0 0 0">
                 <div class="col-xs-6 col-md-6 divTileContainer" name="dragon">
-                    <div class="divTile" style="border-radius: 10px; background-color: #c9c9c9; display: flex; flex-direction: row; justify-content: space-evenly">
-                        <div class="productCircleButton productTagShown" style="align-self: flex-end">
-                            <div class="productCircleInner" style="color: #c9c9c9">+</div>
+                    <div class="divTile" style="border-radius: 10px; background-color: #c9c9c9; display: block; height: 100%;/*display: flex; flex-direction: row; justify-content: space-evenly*/">
+                        <div class="productCircleButton productTagShown" style="align-self: flex-end; position: absolute; bottom: 0;">
+                            <div class="productCircleInner" style="color: #c9c9c9;">+</div>
                         </div>
-                        <img src="../www/image/product_tile.png" alt="" class="img-responsive tileImg tileImgLB">
+                        <img src="../www/image/dragon_black_and_white.jpg" alt="" class="img-fluid-60" style="margin: 5% 0% 10% 2.5%;" >
                         <div class="respHelper" style="align-self: flex-end">
                             <div class="productCircleButton productTagHidden" style="">
                                 <div class="productCircleInner" style="color: #c9c9c9">+</div>
                             </div>
-                            <div class="productNameTag " style="text-transform: uppercase; color: #1d9eda; font-family: Gotham-Ultra; ">Canoe</div>
+                            <div class="productNameTag " style="text-transform: uppercase; color: #1d9eda; font-family: Gotham-Ultra;  position: absolute; right: 3%; bottom: 0;">Dragon</div>
                         </div>
                     </div>
                 </div>
@@ -722,7 +722,7 @@
                             <a href="../src/product.html" style="cursor: pointer"><div class="footerColumnText">Products</div></a>
                             <a href="../src/contact.html" style="cursor: pointer"><div class="footerColumnText">Contact us</div></a>
                             <a href="../src/ourStory.html" style="cursor: pointer"><div class="footerColumnText">Our story</div></a>
-                            <a href="../src/terms.html" target="_blank"><div class="footerColumnText">Terms and conditions2</div></a>
+                            <a href="../src/terms.html" target="_blank"><div class="footerColumnText">Terms and conditions</div></a>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -739,7 +739,9 @@
         </div>
         <div class="col-md-6" style="margin: auto; display: flex; flex-direction: column;">
             <div style="align-self: flex-end;">
-                <div class="logoFooter">KAYAKFIRST</div>
+                <div class="logoFooter" style="max-width: 75%; margin: auto;">
+                    <img src="../www/image/logo/kayakfirst_app_logo_white@3x.png" style="max-width: 100%; height: auto;" class="img-fluid" />
+                </div>
             </div>
         </div>
     </div>
@@ -751,7 +753,9 @@
     </a>
     <a href="../index.html">
         <div class="Rectangle-Logo">
-            <div class="LOGO">KAYAKFIRST</div>
+            <div class="LOGO" style="max-width: 75%;">
+                <img src="../www/image/logo/kayakfirst_app_logo.png" class="img-fluid" style="max-width: 100%; height: auto;" />
+            </div>
         </div>
     </a>
     <nav role="navigation">
@@ -813,24 +817,36 @@
         var objTarget = event.target;
         if($(objTarget).hasClass('productCircleButton')) objTarget = $(event.target).children();
         var productType = $(objTarget).closest('.divTileContainer').attr('name');
+        var fileBefore = $(objTarget).closest('.divTile').children('img.img-fluid-60').prop('src');
         if(objProduct[productType]){
-            $(objTarget).closest('.productCircleInner').text('+');
-            $(objTarget).closest('.divTile')
+            $(objTarget)
+                .closest('.productCircleInner')
+                .text('+');
+            $(objTarget)
+                .closest('.divTile')
                 .css('background-color', '#c9c9c9');
-            $(objTarget).closest('.productCircleInner')
+            $(objTarget)
+                .closest('.productCircleInner')
                 .css('color', '#c9c9c9');
-            $(objTarget).closest('.divTile')
+            var fileAfter = removeActiveTag(fileBefore);
+            $(objTarget)
+                .closest('.divTile')
                 .children('img.img-fluid-60')
-                .prop('src', '../www/image/kayak_black_and_white_right.jpg');
+                .prop('src', fileAfter);
         } else {
-            $(objTarget).closest('.productCircleInner').text('✓');
-            $(objTarget).closest('.divTile')
+            $(objTarget)
+                .closest('.productCircleInner')
+                .text('✓');
+            $(objTarget)
+                .closest('.divTile')
                 .css('background-color', '#191919');
             $(objTarget).closest('.productCircleInner')
                 .css('color', '#191919');
-            $(objTarget).closest('.divTile')
+            var fileAfter = addActiveTag(fileBefore);
+            $(objTarget)
+                .closest('.divTile')
                 .children('img.img-fluid-60')
-                .prop('src', '../www/image/kayak_black_and_white_right_active.jpg');
+                .prop('src', fileAfter);
         }
         objProduct[productType] = !objProduct[productType];
     });
@@ -856,6 +872,29 @@
             window.location.href = urlSuf;
         }
     });
+
+    function baseName(str){
+        var base = new String(str).substring(str.lastIndexOf('/') + 1);
+        if(base.lastIndexOf(".") != -1)
+            base = base.substring(0, base.lastIndexOf("."));
+        return base;
+    }
+
+    function fileExtension(str){
+        return str.split('.').pop();
+    }
+
+    function pathWithoutFilename(str){
+        return str.substring(0, str.lastIndexOf("/")) + '/';
+    }
+
+    var addActiveTag = (str) => {
+        return pathWithoutFilename(str) + baseName(str) + '_active.' + fileExtension(str);
+    };
+
+    var removeActiveTag = (str) => {
+        return pathWithoutFilename(str) + baseName(str).slice(0, -7) + '.' + fileExtension(str);
+    };
 </script>
 </body>
 </html>
