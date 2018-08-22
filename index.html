@@ -174,19 +174,31 @@
             <div class="hsldr-container">
                 <div class="sliderImage">
                     <figure>
-                        <img src="./www/image/image_kayak_art.jpeg" class="img-responsive">
-                        <figcaption><div style="font-size: 2.2em; font-family: Gotham; text-transform: uppercase;">Mirror</div><div style="font-size: 1.5em; font-family: Campton-Light;">motion control for perfect style and educational purposes</div></figcaption>
+                        <img src="./www/image/slider/KAYAKFIRST_STUDIO_008.jpg" class="img-fluid">
+                        <figcaption><div style="font-size: 2.2em; font-family: Gotham; text-transform: uppercase;">Compact Size</div><div style="font-size: 1.5em; font-family: Campton-Light;">minimal space for practicing and for storage</div></figcaption>
                     </figure>
                 </div>
                 <div class="sliderImage">
                     <figure>
-                        <img src="./www/image/image_kayak_art.jpeg" class="img-responsive">
-                        <figcaption><div style="font-size: 2.2em; font-family: Gotham; text-transform: uppercase;">Mirror</div><div style="font-size: 1.5em; font-family: Campton-Light;">motion control for perfect style and educational purposes</div></figcaption>
+                        <img src="./www/image/slider/KAYAKFIRST_STUDIO_026.jpg" class="img-fluid">
+                        <figcaption><div style="font-size: 2.2em; font-family: Gotham; text-transform: uppercase;">Universal</div><div style="font-size: 1.5em; font-family: Campton-Light;">the same core machine for all paddle disciplines by optional module</div></figcaption>
                     </figure>
                 </div>
                 <div class="sliderImage">
                     <figure>
-                        <img src="./www/image/image_kayak_art.jpeg" class="img-responsive">
+                        <img src="./www/image/slider/KAYAKFIRST_STUDIO_028_red.jpg" class="img-fluid">
+                        <figcaption><div style="font-size: 2.2em; font-family: Gotham; text-transform: uppercase;">Unique colors</div><div style="font-size: 1.5em; font-family: Campton-Light;">Pick the colors of your club or color it to your taste</div></figcaption>
+                    </figure>
+                </div>
+                <div class="sliderImage">
+                    <figure>
+                        <img src="./www/image/slider/KAYAKFIRST_STUDIO_050.jpg" class="img-fluid">
+                        <figcaption><div style="font-size: 2.2em; font-family: Gotham; text-transform: uppercase;">Smart monitoring</div><div style="font-size: 1.5em; font-family: Campton-Light;">performance tracking, training history, online challenges and outdoor use</div></figcaption>
+                    </figure>
+                </div>
+                <div class="sliderImage">
+                    <figure>
+                        <img src="./www/image/slider/KAYAKFIRST_STUDIO_043.jpg" class="img-fluid">
                         <figcaption><div style="font-size: 2.2em; font-family: Gotham; text-transform: uppercase;">Mirror</div><div style="font-size: 1.5em; font-family: Campton-Light;">motion control for perfect style and educational purposes</div></figcaption>
                     </figure>
                 </div>
@@ -392,6 +404,11 @@
                 .parent('a')
                 .prop('href', '#');
         }
+
+        $('.hsldr-prev, .hsldr-next').on('click', function(event){
+            var objNavBtn = $(event.target);
+            objNavBtn.parent('.hsldr-navigation').parent('.hsldr-container').children('.sliderImage').eq(0).children('.hsldr-gallery-container').find('.active-slide').toggleClass( 'showcaption' ).siblings().removeClass( 'showcaption' );
+        });
     </script>
 </body>
 </html>

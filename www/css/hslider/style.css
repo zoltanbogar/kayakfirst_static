@@ -118,7 +118,7 @@ html, body {
 
 .info {
 	content: "";
-	display: block;
+	display: none;
 	width: 20px;
 	height: 20px;
 	cursor: pointer;

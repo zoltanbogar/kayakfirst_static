@@ -346,7 +346,8 @@
 					$activeIndex = $imageNumber - 1;											
 					$(thisSlider).find( '.active-slide' ).removeClass( 'active-slide' );
 					$(thisSlider).find( '.hsldr-image-container:last-child' ).addClass( 'active-slide' );	
-					makeCentral();			
+					makeCentral();
+                    //$( this ).parent().toggleClass( 'showcaption' ).siblings().removeClass( 'showcaption' );
 
 				} else {
 
@@ -381,7 +382,8 @@
 
 					makeCentral();	
 
-				}	
+				}
+
 
 
 		}
@@ -443,6 +445,7 @@
 			windowWidthTimer = setTimeout(function() {
 				windowWidth = $( window ).width() + windowWidthAddedPadding;
                 showNextSlide();
+                $('.active-slide').toggleClass( 'showcaption' ).siblings().removeClass( 'showcaption' );
 			}, 1000);	// the delay shoudld be sufficiently bigger than the one use above	
 
 		};
